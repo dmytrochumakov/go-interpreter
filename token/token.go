@@ -14,8 +14,16 @@ const (
 	IDENT = "IDENT"
 	INT   = "INT"
 
-	ASSIGN = "="
-	PLUS   = "+"
+	// Operators
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
+
+	LT = "<"
+	GT = ">"
 
 	COMMA     = ","
 	SEMICOLON = ";"
@@ -29,14 +37,14 @@ const (
 	LET      = "LET"
 )
 
-var keywords = map[string]TokenType {
-"fn": FUNCTION,
+var keywords = map[string]TokenType{
+	"fn":  FUNCTION,
 	"let": LET,
 }
 
 func LookupIdent(ident string) TokenType {
-if tok, ok := keywords[ident]; ok {
-return tok
+	if tok, ok := keywords[ident]; ok {
+		return tok
 	}
-return IDENT
+	return IDENT
 }
