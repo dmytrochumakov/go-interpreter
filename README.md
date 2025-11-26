@@ -14,3 +14,4 @@
 - Boolean Literals
 - Grouped Expressions
 - If Expressions
+- Function Literals
