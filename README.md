@@ -15,3 +15,4 @@
 - Grouped Expressions
 - If Expressions
 - Function Literals
+- Call Expressions
