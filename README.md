@@ -18,3 +18,4 @@
 - Call Expressions
 
 ### Object System
+- Integer Object Type
