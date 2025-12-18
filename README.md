@@ -18,4 +18,5 @@
 - Call Expressions
 
 ### Object System
-- Integer Object Type
+- Integer 
+- Boolean 
