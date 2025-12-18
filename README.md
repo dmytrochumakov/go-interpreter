@@ -20,3 +20,4 @@
 ### Object System
 - Integer 
 - Boolean 
+- Null
