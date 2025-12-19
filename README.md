@@ -3,6 +3,7 @@
 ## Parsing 
 - Let Statements
 - Return Statements
+
 ### Parsing Expressions
 - Top Down Operator Precedence (or: Pratt Parsing)
 - AST
@@ -17,7 +18,10 @@
 - Function Literals
 - Call Expressions
 
-### Object System
+## Object System
 - Integer 
 - Boolean 
 - Null
+
+## Evaluation
+- Expressions
