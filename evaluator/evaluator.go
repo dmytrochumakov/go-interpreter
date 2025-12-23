@@ -6,6 +6,7 @@ import "github.com/dmytrochumakov/go-interpreter/ast"
 var (
 	TRUE  = &object.Boolean{Value: true}
 	FALSE = &object.Boolean{Value: false}
+	NULL  = &object.NULL{}
 )
 
 func Eval(node ast.Node) object.Object {
