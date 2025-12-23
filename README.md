@@ -25,3 +25,4 @@
 
 ## Evaluation
 - Expressions
+- Boolean Literals
