@@ -1,9 +1,8 @@
 package ast
 
 import (
-	"testing"
-
 	"github.com/dmytrochumakov/go-interpreter/token"
+	"testing"
 )
 
 func TestString(t *testing.T) {
@@ -24,6 +23,6 @@ func TestString(t *testing.T) {
 	}
 
 	if program.String() != "let myVar = anotherVar;" {
-		t.Errorf("program.String() wrong, got=%q", program.String())
+		t.Errorf("program.String() wrong. got=%q", program.String())
 	}
 }
