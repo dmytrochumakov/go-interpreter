@@ -26,3 +26,4 @@
 ## Evaluation
 - Expressions
 - Boolean Literals
+- Infix Expressions
