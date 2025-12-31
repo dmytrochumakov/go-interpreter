@@ -28,3 +28,4 @@
 - Boolean Literals
 - Infix Expressions
 - Conditionals
+- Return Statements
