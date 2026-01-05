@@ -29,3 +29,4 @@
 - Infix Expressions
 - Conditionals
 - Return Statements
+- Error Handling
