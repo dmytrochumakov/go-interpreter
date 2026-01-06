@@ -30,3 +30,4 @@
 - Conditionals
 - Return Statements
 - Error Handling
+- Bindings & The Enviroment
