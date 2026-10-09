@@ -2,8 +2,8 @@ package parser
 
 import (
 	"fmt"
-	"github.com/dmytrochumakov/go-interpreter/ast"
-	"github.com/dmytrochumakov/go-interpreter/lexer"
+	"monkey/ast"
+	"monkey/lexer"
 	"testing"
 )
 
@@ -546,6 +546,31 @@ func TestFunctionLiteralParsing(t *testing.T) {
 	}
 
 	testInfixExpression(t, bodyStmt.Expression, "x", "+", "y")
+}
+
+func TestStringLiteralExpression(t *testing.T) {
+	input := `"hello world";`
+
+	l := lexer.New(input)
+	p := New(l)
+	program := p.ParseProgram()
+	checkParserErrors(t, p)
+
+	stmt, ok := program.Statements[0].(*ast.ExpressionStatement)
+	if !ok {
+		t.Fatalf("program.Statements[0] is not ast.ExpressionStatement. got=%T",
+			program.Statements[0])
+	}
+
+	literal, ok := stmt.Expression.(*ast.StringLiteral)
+	if !ok {
+		t.Fatalf("stmt.Expression is not ast.StringLiteral. got=%T",
+			stmt.Expression)
+	}
+
+	if literal.Value != "hello world" {
+		t.Errorf("literal value not %q. got=%q", "hello world", literal.Value)
+	}
 }
 
 func TestFunctionParameterParsing(t *testing.T) {

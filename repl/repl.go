@@ -4,18 +4,17 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-
-	"github.com/dmytrochumakov/go-interpreter/evaluator"
-	"github.com/dmytrochumakov/go-interpreter/lexer"
-	"github.com/dmytrochumakov/go-interpreter/object"
-	"github.com/dmytrochumakov/go-interpreter/parser"
+	"monkey/evaluator"
+	"monkey/lexer"
+	"monkey/object"
+	"monkey/parser"
 )
 
 const PROMPT = ">> "
 
 func Start(in io.Reader, out io.Writer) {
 	scanner := bufio.NewScanner(in)
-	env := object.NewEnviroment()
+	env := object.NewEnvironment()
 
 	for {
 		fmt.Fprintf(out, PROMPT)

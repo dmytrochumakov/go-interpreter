@@ -2,9 +2,9 @@ package parser
 
 import (
 	"fmt"
-	"github.com/dmytrochumakov/go-interpreter/ast"
-	"github.com/dmytrochumakov/go-interpreter/lexer"
-	"github.com/dmytrochumakov/go-interpreter/token"
+	"monkey/ast"
+	"monkey/lexer"
+	"monkey/token"
 	"strconv"
 )
 
@@ -63,6 +63,7 @@ func New(l *lexer.Lexer) *Parser {
 	p.registerPrefix(token.LPAREN, p.parseGroupedExpression)
 	p.registerPrefix(token.IF, p.parseIfExpression)
 	p.registerPrefix(token.FUNCTION, p.parseFunctionLiteral)
+	p.registerPrefix(token.STRING, p.parseStringLiteral)
 
 	p.infixParseFns = make(map[token.TokenType]infixParseFn)
 	p.registerInfix(token.PLUS, p.parseInfixExpression)
@@ -75,6 +76,8 @@ func New(l *lexer.Lexer) *Parser {
 	p.registerInfix(token.GT, p.parseInfixExpression)
 
 	p.registerInfix(token.LPAREN, p.parseCallExpression)
+
+
 
 	// Read two tokens, so curToken and peekToken are both set
 	p.nextToken()
@@ -422,6 +425,10 @@ func (p *Parser) parseCallArguments() []ast.Expression {
 	return args
 }
 
+func (p *Parser) parseStringLiteral() ast.Expression {
+	return &ast.StringLiteral{Token: p.curToken, Value: p.curToken.Literal}
+}
+
 func (p *Parser) registerPrefix(tokenType token.TokenType, fn prefixParseFn) {
 	p.prefixParseFns[tokenType] = fn
 }
@@ -429,3 +436,4 @@ func (p *Parser) registerPrefix(tokenType token.TokenType, fn prefixParseFn) {
 func (p *Parser) registerInfix(tokenType token.TokenType, fn infixParseFn) {
 	p.infixParseFns[tokenType] = fn
 }
+
