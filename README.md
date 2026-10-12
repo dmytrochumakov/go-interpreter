@@ -37,6 +37,7 @@
 - Function
 - Return Value
 - Error
+- Builtin
 
 ## Evaluation
 - Expressions
@@ -48,6 +49,9 @@
 - Error Handling
 - Bindings & The Environment
 - Function Calls & Closures
+
+## Builtins
+- `len` (string length)
 
 ## REPL
 - Interactive REPL
