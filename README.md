@@ -30,6 +30,7 @@
 - Function Literals
 - Call Expressions
 - Array Literals
+- Index Operator Expressions
 
 ## Object System
 - String
