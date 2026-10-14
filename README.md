@@ -6,6 +6,7 @@
 - Integer Literals
 - String Literals
 - Operators & Special Characters
+- Array Delimiters (`[`, `]`)
 - Two-Character Operators (`==`, `!=`)
 
 ## Parsing
@@ -28,6 +29,7 @@
 - If Expressions
 - Function Literals
 - Call Expressions
+- Array Literals
 
 ## Object System
 - String
