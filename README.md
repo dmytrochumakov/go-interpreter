@@ -37,6 +37,7 @@
 - Integer
 - Boolean
 - Null
+- Array
 - Function
 - Return Value
 - Error
@@ -47,6 +48,8 @@
 - Boolean Literals
 - Infix Expressions
 - String Concatenation
+- Array Literals
+- Index Operator Expressions
 - Conditionals
 - Return Statements
 - Error Handling
@@ -54,7 +57,10 @@
 - Function Calls & Closures
 
 ## Builtins
-- `len` (string length)
+- `len` (string length, array length)
+- `first` (first element of an array)
+- `last` (last element of an array)
+- `append` (push an element onto an array)
 
 ## REPL
 - Interactive REPL
