@@ -7,6 +7,7 @@
 - String Literals
 - Operators & Special Characters
 - Array Delimiters (`[`, `]`)
+- Hash Delimiters (`{`, `}`)
 - Two-Character Operators (`==`, `!=`)
 
 ## Parsing
@@ -31,6 +32,7 @@
 - Call Expressions
 - Array Literals
 - Index Operator Expressions
+- Hash Literals
 
 ## Object System
 - String
@@ -38,6 +40,7 @@
 - Boolean
 - Null
 - Array
+- Hash
 - Function
 - Return Value
 - Error
@@ -50,6 +53,8 @@
 - String Concatenation
 - Array Literals
 - Index Operator Expressions
+- Hash Literals
+- Hash Index Expressions
 - Conditionals
 - Return Statements
 - Error Handling
