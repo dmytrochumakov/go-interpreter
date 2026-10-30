@@ -60,6 +60,14 @@ func TestModify(t *testing.T) {
 			&IndexExpression{Left: two(), Index: two()},
 		},
 		{
+			&ReturnStatement{ReturnValue: one()},
+			&ReturnStatement{ReturnValue: two()},
+		},
+		{
+			&LetStatement{Value: one()},
+			&LetStatement{Value: two()},
+		},
+		{
 			&IfExpression{
 				Condition: one(),
 				Consequence: &BlockStatement{
