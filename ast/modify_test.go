@@ -68,6 +68,10 @@ func TestModify(t *testing.T) {
 			&LetStatement{Value: two()},
 		},
 		{
+			&ArrayLiteral{Elements: []Expression{one(), one()}},
+			&ArrayLiteral{Elements: []Expression{two(), two()}},
+		},
+		{
 			&FunctionLiteral{
 				Parameters: []*Identifier{},
 				Body: &BlockStatement{
